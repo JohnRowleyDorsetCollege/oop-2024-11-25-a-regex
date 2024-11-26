@@ -56,12 +56,12 @@ namespace oop_2024_11_25_a_regex.models
         public static void ValidateEirCode()
         {
             Console.WriteLine($"\nEnter an EirCode to Validate:");
-            Console.Write("Enter your string: ");
+           
             string userInput = Console.ReadLine();
 
-            // Regex pattern to validate email addresses
-            string pattern = @" pattern to go here ";
-            Regex regex = new Regex(pattern);
+            // Regex pattern to validate eircode address
+            string pattern = @"^[A-Z]{1}\d{2} [A-Z]{1}[A-Z\d]{3}$";
+
 
             if (Regex.IsMatch(userInput,pattern))
             {
