@@ -41,11 +41,11 @@ namespace oop_2024_11_25_a_regex.models
                 if (Regex.IsMatch(testString, pattern))
                 {
 
-                    Console.WriteLine($"{testString} is validated");
+                    Console.WriteLine($"\n{testString} is validated");
                 }
                 else
                 {
-                    Console.WriteLine($"{testString} is NOT validated against {pattern}");
+                    Console.WriteLine($"\n\t{testString} is NOT validated against {pattern}");
                 }
               
             }
@@ -80,9 +80,11 @@ namespace oop_2024_11_25_a_regex.models
         }
         public static void TheoryChallenge()
         {
-            string[] testStrings = { "AB-12-34-aBcd" , "xy-67-01-xxXY", "invalid-567-n"};
-           
+            string[] testStrings = { "AB-12-34-abcd" , "XY-67-01-xxxy", "invalid-567-n"};
+            string pattern = @"^[A-Z]{2}-\d{2}-\d{2}-[a-z]{4}$";
+            ValidatePattern(pattern, testStrings);
         }
+
 
         public static void EirCode()
         {
